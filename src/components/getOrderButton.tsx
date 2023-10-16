@@ -5,8 +5,8 @@ interface GetOrderButtonProps {
 const GetOrderButton: React.FC<GetOrderButtonProps> = ({ onClick }) => {
 
   return (
-    <button onClick={onClick}>
-      Нажми меня
+    <button onClick={onClick} className="button">
+      Получить закаЗ
     </button>
   );
 };

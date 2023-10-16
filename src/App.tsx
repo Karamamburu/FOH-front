@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from 'react';
 import { get } from './api';
 import GetOrderButton from './components/getOrderButton';
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <GetOrderButton onClick={fetchData}/>
+      <GetOrderButton onClick={fetchData} />
       {loading ? (
         <p>Получение заказа...</p>
       ) : data ? (
@@ -35,6 +36,7 @@ function App() {
       ) : (
         <p>Заказ отсутствует</p>
       )}
+
     </div>
   );
 }
