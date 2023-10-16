@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { get } from './api';
+import GetOrderButton from './components/getOrderButton';
 
 interface OrderData {
   [key: string]: number;
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <button onClick={fetchData}>Получить заказ</button>
+      <GetOrderButton onClick={fetchData}/>
       {loading ? (
         <p>Получение заказа...</p>
       ) : data ? (
