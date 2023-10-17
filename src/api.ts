@@ -11,4 +11,5 @@ export const get = async (url: string) => {
     return response.data;
 }
 
+
 export default api;

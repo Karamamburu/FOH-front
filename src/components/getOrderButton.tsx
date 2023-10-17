@@ -1,12 +1,12 @@
 interface GetOrderButtonProps {
-  onClick: () => void; // Принимает функцию без аргументов и без возвращаемого значения
+  onClick: () => void;
 }
 
 const GetOrderButton: React.FC<GetOrderButtonProps> = ({ onClick }) => {
 
   return (
     <button onClick={onClick} className="button">
-      Получить закаЗ
+      Получить заказ
     </button>
   );
 };
