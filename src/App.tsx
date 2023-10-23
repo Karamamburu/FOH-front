@@ -30,9 +30,7 @@ function App() {
       {loading ? (
         <p>Получение заказа...</p>
       ) : data ? (
-        <div>
-          <OrderList data={data} />
-        </div>
+        <OrderList data={data} />
       ) : (
         <p>Заказ отсутствует</p>
       )}
