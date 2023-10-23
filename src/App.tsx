@@ -1,12 +1,15 @@
 import { useState } from 'react';
+import './App.css';
 import { get } from './api';
+import GetOrderButton from './components/getOrderButton';
+import OrderList from './components/productList';
 
-interface OrderData {
-  [key: string]: number;
+interface OrderItem {
+  name: string;
 }
 
 function App() {
-  const [data, setData] = useState<OrderData | null>(null);
+  const [data, setData] = useState<OrderItem[] | null>(null);
   const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
@@ -19,17 +22,16 @@ function App() {
     } finally {
       setLoading(false);
     }
-  };
+  }
 
   return (
     <div>
-      <button onClick={fetchData}>Получить заказ</button>
+      <GetOrderButton onClick={fetchData} />
       {loading ? (
         <p>Получение заказа...</p>
       ) : data ? (
         <div>
-          <h2>Заказ</h2>
-          <pre>{JSON.stringify(data, null, 2)}</pre>
+          <OrderList data={data} />
         </div>
       ) : (
         <p>Заказ отсутствует</p>

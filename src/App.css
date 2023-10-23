@@ -40,3 +40,104 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  width: 90vw;
+  max-width: 914px;
+  height: 90vh;
+  max-height: 412px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  margin: 0;
+  padding: 0;
+  gap: 1%;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  height: 11%;
+  background-color: #dc3232;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.product-text {
+  border: 2px dashed red;
+  margin: 0;
+  width: 100%;
+  height: 65%;
+}
+
+h3 {
+  border: 2px dashed red;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  height: 10%;
+}
+.condiments-list {
+  margin: 0;
+  width: 90%;
+  height: 50%;
+  max-height: 50%;
+  padding-left: 5%;
+  padding-top: 0;
+
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.condiment {
+  border: 2px dashed red;
+  max-width: 90%;
+  height: 95%;
+  padding: 0;
+  margin: 0;
+  background-image: url(images/napkin.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.product-tray {
+  margin: 0;
+  width: 90%;
+  height:99%;
+  max-height: 412px;
+  border: 3px dashed darkblue;
+
+  padding: 12% 15%;
+
+  background-image: url(/images/tray-test2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.product {
+  border: 2px dashed red;
+  margin: 0;
+  
+  max-width: 90%;
+  height: 90%;
+  padding: 0;
+  margin: 0;
+  background-image: url(images/bigmaestro-or.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
