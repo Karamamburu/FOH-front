@@ -1,16 +1,22 @@
-interface OrderItem {
-  name: string;
+import React from 'react';
+
+interface ProductImagesProps {
+  images: string[];
 }
 
-interface productImages {
-  data: OrderItem[] | null;
-}
+const ProductImages: React.FC<ProductImagesProps> = ({ images }) => {
+  return (
+    <div>
+      {images.map((imageName, index) => (
+        <img
+          key={index}
+          src={`../src/assets/${imageName}`}
+          alt={imageName}
+          style={{ maxWidth: '100px' }}
+        />
+      ))}
+    </div>
+  );
+};
 
-const productImages: React.FC<productImages> = ({ data }) => {
-  if (!data) {
-    return null;
-  }
-
-
-  return 
-}
+export default ProductImages;
