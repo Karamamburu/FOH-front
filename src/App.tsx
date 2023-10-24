@@ -3,9 +3,11 @@ import './App.css';
 import { get } from './api';
 import GetOrderButton from './components/getOrderButton';
 import OrderList from './components/productList';
+import ProductImages from './components/productsImages'; // Импортируйте компонент
 
 interface OrderItem {
   name: string;
+  img: string;
 }
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
       ) : data ? (
         <div>
           <OrderList data={data} />
+          <ProductImages images={data.map(item => item.img)} />
         </div>
       ) : (
         <p>Заказ отсутствует</p>
