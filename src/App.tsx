@@ -3,7 +3,7 @@ import './App.css';
 import { get } from './api';
 import GetOrderButton from './components/getOrderButton';
 import OrderList from './components/productList';
-import ProductImages from './components/productsImages'; // Импортируйте компонент
+import ProductImages from './components/productsImages';
 
 interface OrderItem {
   name: string;
