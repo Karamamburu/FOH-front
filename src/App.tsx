@@ -12,7 +12,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div>
+    <div className='menu'>
       <Sidebar data={data} setData={setData} setLoading={setLoading} />
       {loading ? (
         <p>Получение заказа...</p>
@@ -21,7 +21,7 @@ function App() {
           {/* Остальная часть вашего компонента */}
         </div>
       ) : (
-        <p>Заказ отсутствует</p>
+        <p>Заказ пока отсутствует</p>
       )}
     </div>
   );
