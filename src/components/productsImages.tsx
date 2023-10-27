@@ -10,7 +10,7 @@ const ProductImages: React.FC<ProductImagesProps> = ({ images }) => {
       {images.map((imageName, index) => (
         <img className='product'
           key={index}
-          src={`../src/assets/${imageName}`}
+          src={`../src/assets/products/${imageName}`}
           alt={imageName}
           style={{ maxWidth: '100px' }}
         />

@@ -58,12 +58,9 @@ h3 {
 .condiment {
   border: 2px dashed red;
   max-width: 90%;
-  height: 95%;
+  height: 70%;
   padding: 0;
   margin: 0;
-  background-image: url(images/napkin.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .product-tray {
@@ -94,7 +91,8 @@ h3 {
   height: 90%;
   padding: 0;
   margin: 0;
-  background-image: url(images/bigmaestro-or.webp);
-  background-size: 100%;
-  background-repeat: no-repeat;
+}
+
+span {
+  font-size: 70%;
 }
