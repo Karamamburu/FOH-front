@@ -18,7 +18,7 @@ const OrderList: React.FC<OrderListProps> = ({ data }) => {
   });
 
   return (
-    <ul>
+    <ul className="product-text">
       {Object.keys(itemsCount).map((name) => (
         <li key={name}>
           {itemsCount[name]} {name}
