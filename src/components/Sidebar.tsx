@@ -1,7 +1,7 @@
 import React from 'react';
 import { fetchData, OrderItem } from '../api';
 import GetOrderButton from './getOrderButton';
-import OrderList from './productList';
+import OrderList from './OrderList';
 
 interface SidebarProps {
   data: OrderItem[] | null;
