@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar';
+import ProductImages from './components/ProductsImages';
 
 interface OrderItem {
   name: string;
@@ -17,9 +18,7 @@ function App() {
       {loading ? (
         <p>Получение заказа...</p>
       ) : data ? (
-        <div>
-          {/* Остальная часть вашего компонента */}
-        </div>
+        <ProductImages images={data.map(item => item.img)}/>
       ) : (
         <p>Заказ пока отсутствует</p>
       )}

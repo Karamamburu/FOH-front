@@ -6,7 +6,7 @@ interface ProductImagesProps {
 
 const ProductImages: React.FC<ProductImagesProps> = ({ images }) => {
   return (
-    <div>
+    <div className='product-tray'>
       {images.map((imageName, index) => (
         <img
           key={index}
