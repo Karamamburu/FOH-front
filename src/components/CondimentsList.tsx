@@ -1,36 +1,39 @@
+import React from 'react';
+
 interface CondimentItem {
-    condiments: {[name: string] : number}
+  condiments: { [name: string]: number };
 }
 
-interface CondimentsList {
-    data: CondimentItem | null
+interface CondimentsListProps {
+  data: CondimentItem | null;
 }
 
-const CondimentsList: React.FC<CondimentsList> = ({ data }) => {
-    if (!data) {
-      return null;
-    }
+const CondimentsList: React.FC<CondimentsListProps> = ({ data }) => {
+  if (!data) {
+    return null;
+  }
 
-    
+  return (
+    <ul className="condiments-list">
+      {Object.keys(data).map((condimentName) => {
+        const count = data[condimentName];
+        if (count > 0) {
+          return (
+            <li key={condimentName}>
+              <img className='condiment'
+                src={`../src/assets/condiments/${condimentName}.png`}
+                alt={condimentName}
+              />
+              <span>
+                {condimentName} : {count}
+              </span>
+            </li>
+          );
+        }
+        return null;
+      })}
+    </ul>
+  );
+};
 
-    return (
-        <ul className="condiments-list">
-            {Object.keys(data).map((condimentName) => (
-                
-                <li key={condimentName}>
-                    <img 
-                        className="condiment"
-                        src={`../src/assets/condiments/${condimentName}.png`} 
-                        alt={condimentName} 
-                    />
-                    <span>{condimentName} : {data[condimentName]}</span>
-                </li>
-    ))}
-                
-        </ul>
-
-    )
-
-}
-
-export default CondimentsList 
+export default CondimentsList;
