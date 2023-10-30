@@ -24,8 +24,8 @@ const CondimentsList: React.FC<CondimentsListProps> = ({ data }) => {
                 src={`../src/assets/condiments/${condimentName}.png`}
                 alt={condimentName}
               />
-              <span>
-                {condimentName} : {count}
+              <span className='condiment-num'>
+              {count}
               </span>
             </li>
           );
