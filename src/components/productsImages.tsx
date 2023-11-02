@@ -12,7 +12,7 @@ const ProductImages: React.FC<ProductImagesProps> = ({ images }) => {
           key={index}
           src={`../src/assets/products/${imageName}`}
           alt={imageName}
-          style={{ maxWidth: '100px' }}
+          style={{ maxWidth: '110%' }}
         />
       ))}
     </div>

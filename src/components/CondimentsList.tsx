@@ -19,8 +19,8 @@ const CondimentsList: React.FC<CondimentsListProps> = ({ data }) => {
         const count = data[condimentName];
         if (count > 0) {
           return (
-            <li key={condimentName}>
-              <img className='condiment'
+            <li key={condimentName} className='condiment'>
+              <img className='condiment-image'
                 src={`../src/assets/condiments/${condimentName}.png`}
                 alt={condimentName}
               />
