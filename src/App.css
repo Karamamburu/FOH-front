@@ -1,24 +1,33 @@
 body {
-  width: 90vw;
+  width: 100%;
   max-width: 914px;
-  height: 90vh;
-  max-height: 412px;
+  height: 100%;
+  max-height: 400px;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .menu {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 2fr 2.9fr;
   margin: 0;
   padding: 0;
   gap: 1%;
 }
 
+.sidebar {
+  width: 100%;
+  height: 400px;
+  /* border: 3px dashed darkblue; */
+
+}
+
 .button {
   display: block;
   width: 100%;
-  height: 11%;
+  height: 40px;
+  border-radius: 0;
+  border: 0;
   background-color: #dc3232;
   color: white;
   padding: 5px;
@@ -26,69 +35,94 @@ body {
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
+
 }
 
 .product-text {
-  border: 2px dashed red;
+  list-style: none;
+  /* border: 2px dashed red; */
   margin: 0;
-  width: 100%;
-  height: 65%;
+  padding-top: 2%;
+  width: auto;
+  height: 43%;
+  font-size: 1.2em;
+
 }
 
-h3 {
-  border: 2px dashed red;
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-bottom: 1%;
-  height: 10%;
-}
+
 .condiments-list {
   margin: 0;
-  width: 90%;
-  height: 50%;
-  max-height: 50%;
+  padding: 0;
+  width: 95%;
+  height: auto;
   padding-left: 5%;
   padding-top: 0;
 
+  /* border: 2px dashed red; */
+
   list-style-type: none;
+  list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 
 .condiment {
-  border: 2px dashed red;
-  max-width: 90%;
-  height: 70%;
+  border: 1px solid red;
+  border-radius: 10%;
+  max-width: 70px;
+  height: 70px;
+  max-height: 70px;
   padding: 0;
   margin: 0;
 }
 
+.condiment-image {
+  max-width: 60px;
+  height: 60px;
+  max-height: 70px;
+}
+
+.condiment-num {
+  font-size: 1.8em;
+  font-weight: bold;
+  position: relative;
+  top: -38%;
+  right: -55%;
+  background-color: #dc3232;
+  color: #fff;
+  margin-left: auto;
+}
+
 .product-tray {
   margin: 0;
-  width: 90%;
-  height:99%;
-  max-height: 412px;
-  border: 3px dashed darkblue;
-
-  padding: 12% 15%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  /* border: 3px dashed darkblue; */
 
   background-image: url(./assets/tray.jpg);
-  background-size: 100%;
+  background-size: 95%;
   background-repeat: no-repeat;
   list-style-type: none;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 0;
   align-items: start;
+  padding-top: 10%;
+  padding-left: 4%;
+  padding-right: 11%;
+
+
 }
 
 .product {
-  border: 2px dashed red;
-  margin: 0;
+  /* border: 2px dashed red; */
+
   
-  max-width: 90%;
-  height: 90%;
+  max-width: 100%;
+  height: auto;
   padding: 0;
   margin: 0;
 }
