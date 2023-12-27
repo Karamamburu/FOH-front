@@ -23,7 +23,7 @@ export const fetchData = async (
     setLoading(true);
 
     const result = await get('http://192.168.1.9:3500/get_random_order');
-
+    
     setData(result);
   } catch (error) {
     console.error('Ошибка при запросе данных:', error);
